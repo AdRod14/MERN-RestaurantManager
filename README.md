@@ -30,9 +30,7 @@ MERN-RestaurantManager es una plataforma  diseñada para gestionar eficientement
 
 ## Instalación
 
-### Clonar el repositorio
-
-#### Clonar
+#### Clonar el repositorio
 
 En la carpeta donde vas a almacenar el proyecto ejecuta el siguiente comando (GNU/Linux o MacOS):
 ```
