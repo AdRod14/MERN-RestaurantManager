@@ -1,7 +1,5 @@
 # MERN-RestaurantManager
 
-# MERN-WebHotelManager
-
 ![Proyecto en acción](https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) <!-- Puedes agregar una imagen o un GIF de tu proyecto aquí -->
 
 ## Contenido
@@ -50,13 +48,13 @@ node --version
 En caso de no contar con Node.js puedes instalarlo de acuerdo a tu distribución.
 
 Una vez que tengas Node.js ubicate en el directorio MERN-RestaurantManager y ejecuta los siguientes comandos:
-'''
+```
 cd backend/
 npm install package.json
 
 cd ../frontend
 npm install package.json
-'''
+```
 
 ## Ejecutar Proyecto
 
