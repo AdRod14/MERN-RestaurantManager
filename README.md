@@ -51,18 +51,35 @@ Una vez que tengas Node.js ubicate en el directorio MERN-RestaurantManager y eje
 ```
 cd backend/
 npm install package.json
-
-cd ../frontend
+```
+```
+cd ../frontend/
 npm install package.json
 ```
+#### MongoDB Atlas
+Este proyecto utiliza MongoDB Atlas, para que funcione correctamente asegurate de tener una cuenta activada. En la carpeta backend crea un archivo .env y agrega el siguiente código:
+
+```
+cd ../backend/
+touch .env
+```
+adentro del archivo .env pega el siguiente código:
+```
+PORT=4000
+MONGO_URI= <tu link de conexión con la base de datos>
+```
+Finalmente guarda el archivo.
 
 ## Ejecutar Proyecto
 
+Para ejecutar el proyecto, desde la carpeta de backend ejecuta el siguiente comando:
 ```
-/* My-Project -run */
+npm run dev
 ```
-
-
+Luego cambia a la carpeta de frontend y ejecuta este segundo comando:
+```
+npm start
+```
 
 ## Contribuciones
 
