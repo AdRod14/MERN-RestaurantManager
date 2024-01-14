@@ -9,14 +9,15 @@
 
 ## Descripción General del Proyecto
 
-MERN-RestaurantManager es una plataforma  diseñada para gestionar eficientemente las operaciones y servicios de un restaurante. Con un enfoque en la registro de cuentas de clientes y la facilitación de la experiencia de los huéspedes, este sistema proporciona una interfaz intuitiva para optimizar la administración restaurantera.
+MERN-RestaurantManager es una plataforma  diseñada para gestionar eficientemente las operaciones y servicios de un restaurante. Con un enfoque en la facilitación de creación de menús y un registro de cuentas rápido, este sistema proporciona una interfaz intuitiva para optimizar la administración restaurantera.
 
 ## Funcionalidades Específicas
 
 - Gestión de cuentas de clientes: Creación, lectura, edición y eliminación de cuentas de clientes.
+- Gestión de menú de restaurantes: Creación, lectura y edición de menús.
 - Interfaz de usuario: Admin & guest layout.
-- Detalles de cuentas de clientes: Se permite consultar la información de contacto del cliente, su estado actual y la información de su reserva.
-- Historial de estadías: Registro histórico de las estancias pasadas de los clientes en el hotel.
+- Búsqueda de cuentas de clientes: Se permite consultar la información de cuentas pasadas, utilizando cómo parámetros de búsqueda la fecha y número de mesa.
+- Generación de recibos: Generación de recibos de cuentas de clientes.
 
 ## Recursos/Tecnologías Utilizadas
 
@@ -26,7 +27,8 @@ MERN-RestaurantManager es una plataforma  diseñada para gestionar eficientement
 - React: Biblioteca de JavaScript utilizada para construir interfaces de usuario interactivas y de una sola página (SPA). 
 - MongoDB: Sistema de gestión de bases de datos NoSQL que utiliza un modelo de documento para almacenar datos.
 - Mongoose: Biblioteca de modelado de objetos para MongoDB y Node.js.
-- Python3: Última versión principal del lenguaje de programación Python.
+- Tailwind: Framework de utilidades de CSS que simplifica el desarrollo web al proporcionar clases predefinidas para estilos comunes.
+
 
 ## Instalación
 
