@@ -6,7 +6,7 @@ import  DashBoard  from "./views/DashBoard.jsx";
 import Projects from "./views/Projects.jsx";
 import Teams from "./views/Teams.jsx";
 import Login from "./views/Login.jsx";
-import Signup from "./views/Signup.jsx";
+import Signup from "./views/EditUsers.jsx";
 
 const router = createBrowserRouter([
   {
