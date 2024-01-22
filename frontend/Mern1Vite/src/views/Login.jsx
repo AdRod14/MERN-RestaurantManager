@@ -1,14 +1,25 @@
+import { useState } from 'react';
+import {useLogin} from '../hooks/useLogin'
+import { useAuthContext } from '../hooks/useAuthContext';
+import { Navigate } from 'react-router-dom';
+
 const Login = () => {
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const {login, error} = useLogin();
+  const {user} = useAuthContext();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await login(username,password);
+  }
+
+  if(user){
+    return <Navigate to="/" />
+  }
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-white">
-        <body class="h-full">
-        ```
-      */}
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
@@ -22,7 +33,7 @@ const Login = () => {
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6" action="#" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
                 Usuario
@@ -33,6 +44,7 @@ const Login = () => {
                   name="username"
                   type="username"
                   required
+                  onChange={(e)=>{setUsername(e.target.value)}}
                   className="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -53,6 +65,7 @@ const Login = () => {
                   autoComplete="current-password"
                   required
                   className="block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  onChange={(e)=>{setPassword(e.target.value)}}
                 />
               </div>
             </div>
@@ -64,8 +77,10 @@ const Login = () => {
               >
                 Sign in
               </button>
+
             </div>
           </form>
+          {error && <div className="text-red-500 text-center">{error}</div>}
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import {
   createBrowserRouter,
 } from "react-router-dom";
-import NavBar from './components/navbar.jsx'
+import NavBar from './components/Navbar.jsx'
 import  DashBoard  from "./views/DashBoard.jsx";
 import Projects from "./views/Projects.jsx";
 import Teams from "./views/Teams.jsx";
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
         element: <EditUser />,
       },
       {
-        path: '/projects',
-        element: <Login />,
+        path: '/dashboard',
+        element: <DashBoard />,
       },
       {
         path: '/Teams',
@@ -36,7 +36,10 @@ const router = createBrowserRouter([
       },
 
     ]
-  },
+  },{
+    path: "/login",
+    element: <Login />,
+  }
 ]);
 
 export default router;
